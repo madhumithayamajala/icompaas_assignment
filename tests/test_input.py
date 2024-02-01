@@ -1,8 +1,6 @@
 import json
 from app import app
 
-#test cases addded
-
 def test_valid_input_should_be_sanitized():
     client = app.test_client()
     data = {'input': 'safe_input'}
