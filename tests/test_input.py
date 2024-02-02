@@ -19,7 +19,7 @@ def test_invalid_input_should_be_unsanitized():
 
 def test_missing_input_field_should_return_error():
     client = app.test_client()
-    data = {'invalid_key': 'some_value'}
+    data = {'madhu': 'yamaja'}
     response = client.post('/v1/sanitized/input/', data=json.dumps(data), content_type='application/json')
     assert response.status_code == 400
     assert json.loads(response.data) == {'error': 'Missing input field in the JSON payload'}
